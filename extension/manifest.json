@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Link NeuroGuard",
+  "version": "2.0",
+  "description": "Proactive neural threat detection for malicious links.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Scan Current Tab"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.hf.space/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

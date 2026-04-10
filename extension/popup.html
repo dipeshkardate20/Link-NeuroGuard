@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  
+  <div class="header">
+    <h1>NEUROGUARD</h1>
+    <span class="badge-active">Active</span>
+  </div>
+
+  <div class="card">
+    <p class="label">Current Target</p>
+    <input type="text" id="target-url" readonly />
+    
+    <button id="scan-btn">Analyze Target</button>
+  </div>
+
+  <div id="results-area" class="card hidden">
+    <div class="results-header">
+      <span class="label">Threat Profile</span>
+      <span id="verdict-badge"></span>
+    </div>
+    
+    <p id="threat-type"></p>
+    <p id="confidence"></p>
+    
+    <div class="reasoning-container">
+      <p id="reasoning"></p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
